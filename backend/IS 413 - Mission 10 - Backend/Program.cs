@@ -10,10 +10,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
-builder.Services.AddDbContext<FoodContext>(options =>
-    options.UseSqlite(builder.Configuration["ConnectionStrings:FoodConnection"])
+builder.Services.AddDbContext<BowlerContext>(options =>
+    options.UseSqlite(builder.Configuration["ConnectionStrings:BowlerConnection"])
 );
-builder.Services.AddScoped<IFoodRepository, EFFoodRepository>();
+builder.Services.AddScoped<IBowlerRepository, EFBowlerRepository>();
 
 var app = builder.Build();
 

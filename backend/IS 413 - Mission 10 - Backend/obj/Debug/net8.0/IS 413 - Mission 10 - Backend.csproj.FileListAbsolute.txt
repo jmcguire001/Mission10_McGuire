@@ -176,3 +176,4 @@ C:\Users\elect\OneDrive - Brigham Young University\Documents\IS 413 - Mission 10
 C:\Users\elect\OneDrive - Brigham Young University\Documents\IS 413 - Mission 10\backend\IS 413 - Mission 10 - Backend\obj\Debug\net8.0\IS 413 - Mission 10 - Backend.pdb
 C:\Users\elect\OneDrive - Brigham Young University\Documents\IS 413 - Mission 10\backend\IS 413 - Mission 10 - Backend\obj\Debug\net8.0\IS 413 - Mission 10 - Backend.genruntimeconfig.cache
 C:\Users\elect\OneDrive - Brigham Young University\Documents\IS 413 - Mission 10\backend\IS 413 - Mission 10 - Backend\obj\Debug\net8.0\ref\IS 413 - Mission 10 - Backend.dll
+C:\Users\elect\OneDrive - Brigham Young University\Documents\IS 413 - Mission 10\backend\IS 413 - Mission 10 - Backend\obj\Debug\net8.0\IS 413 - Mission 10 - Backend.sourcelink.json
