@@ -9,5 +9,6 @@ namespace IS_413___Mission_10___Backend.Data
         }
 
         public DbSet<Bowler> Bowlers { get; set; }
+        public DbSet<Team> Teams { get; set; }
     }
 }

@@ -18,12 +18,18 @@ function BowlerList() {
   return (
     <>
       <div className="row">
-        <h4 className="text-center">Bowler Information</h4>
+        <h4 className="text-center" style={{ marginTop: '10px' }}>
+          Bowler Information
+        </h4>
       </div>
-      <table className="table table-bordered">
+      <table
+        className="table table-bordered"
+        style={{ marginLeft: '10px', marginRight: '0px' }}
+      >
         <thead>
           <tr>
             <th>Bowler Name</th>
+            <th>Bowler's Team Name</th>
             <th>Bowler Address</th>
             <th>Bowler Phone Number</th>
           </tr>
@@ -34,9 +40,13 @@ function BowlerList() {
               <td>
                 {b.bowlerFirstName +
                   ' ' +
-                  b.bowlerMiddleInitial +
-                  ' ' +
+                  (b.bowlerMiddleInit ? b.bowlerMiddleInit + '. ' : '') +
                   b.bowlerLastName}
+              </td>
+              <td>
+                {b.team.teamName === 'Marlins' || b.team.teamName === 'Sharks'
+                  ? b.team.teamName
+                  : ''}
               </td>
               <td>
                 {b.bowlerAddress +
@@ -44,7 +54,7 @@ function BowlerList() {
                   b.bowlerCity +
                   ' ' +
                   b.bowlerState +
-                  ' ' +
+                  ', ' +
                   b.bowlerZip}
               </td>
               <td>{b.bowlerPhoneNumber}</td>

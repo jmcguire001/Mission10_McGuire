@@ -7,7 +7,7 @@ import BowlerList from './Bowler/BowlerList';
 function App() {
   return (
     <div className="App">
-      <Header title="Full Stack React & ASP.NET" />
+      <Header title="Bowling League" />
       <BowlerList />
     </div>
   );

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace IS_413___Mission_10___Backend.Data
 {
@@ -9,6 +10,9 @@ namespace IS_413___Mission_10___Backend.Data
         public string? BowlerLastName { get; set; }
         public string? BowlerFirstName { get; set; }
         public string? BowlerMiddleInit { get; set; }
+        [ForeignKey("TeamID")]
+        public int? TeamID { get; set; }
+        public Team? Team { get; set; }
         public string? BowlerAddress { get; set; }
         public string? BowlerCity { get; set; }
         public string? BowlerState { get; set; }
