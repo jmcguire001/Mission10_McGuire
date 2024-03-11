@@ -1,3 +1,4 @@
+// Typescript definition for Bowler
 export type Bowler = {
   bowlerId: number;
   bowlerLastName: string;

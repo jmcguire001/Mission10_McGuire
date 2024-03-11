@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿// Model for Team
+
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace IS_413___Mission_10___Backend.Data

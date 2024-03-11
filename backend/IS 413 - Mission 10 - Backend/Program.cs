@@ -10,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
+// Add the DbContext to the services
 builder.Services.AddDbContext<BowlerContext>(options =>
     options.UseSqlite(builder.Configuration["ConnectionStrings:BowlerConnection"])
 );
@@ -24,6 +25,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// Enable data consuming from the frontend
 app.UseCors(p => p.WithOrigins("http://localhost:3000"));
 
 app.UseHttpsRedirection();

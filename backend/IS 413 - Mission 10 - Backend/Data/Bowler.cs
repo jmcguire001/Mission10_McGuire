@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿// Model for Bowler
+
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace IS_413___Mission_10___Backend.Data
@@ -10,6 +12,7 @@ namespace IS_413___Mission_10___Backend.Data
         public string? BowlerLastName { get; set; }
         public string? BowlerFirstName { get; set; }
         public string? BowlerMiddleInit { get; set; }
+        // This is a foreign key that links to Team table
         [ForeignKey("TeamID")]
         public int? TeamID { get; set; }
         public Team? Team { get; set; }
