@@ -34,7 +34,8 @@ function Header(props: any) {
           }}
         >
           {/* Display a note about the team name */}
-          *Note: This only includes team names for the 'Marlins' and 'Sharks'
+          *Note: This only includes bowlers who are on the 'Marlins' or 'Sharks'
+          teams
         </p>
       </div>
     </header>

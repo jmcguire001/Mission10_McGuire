@@ -46,35 +46,35 @@ function BowlerList() {
         </thead>
         {/* Table data */}
         <tbody>
-          {/* Map the data to the table using the bowlerId key */}
-          {bowlerData.map((b) => (
-            <tr key={b.bowlerId}>
-              <td>
-                {/* Set up conditional to display middle initial when not null, and a space if null */}
-                {b.bowlerFirstName +
-                  ' ' +
-                  (b.bowlerMiddleInit ? b.bowlerMiddleInit + '. ' : '') +
-                  b.bowlerLastName}
-              </td>
-              {/* Set up conditional to display team name when it is 'Marlins' or 'Sharks' */}
-              <td>
-                {b.team.teamName === 'Marlins' || b.team.teamName === 'Sharks'
-                  ? b.team.teamName
-                  : ''}
-              </td>
-              {/* Display the bowler's address, concatenated */}
-              <td>
-                {b.bowlerAddress +
-                  ', ' +
-                  b.bowlerCity +
-                  ' ' +
-                  b.bowlerState +
-                  ', ' +
-                  b.bowlerZip}
-              </td>
-              <td>{b.bowlerPhoneNumber}</td>
-            </tr>
-          ))}
+          {bowlerData.map(
+            (b) =>
+              // Check if the teamName is 'Marlins' or 'Sharks'
+              (b.team.teamName === 'Marlins' ||
+                b.team.teamName === 'Sharks') && (
+                <tr key={b.bowlerId}>
+                  <td>
+                    {/* Set up conditional to display middle initial when not null, and a space if null */}
+                    {b.bowlerFirstName +
+                      ' ' +
+                      (b.bowlerMiddleInit ? b.bowlerMiddleInit + '. ' : '') +
+                      b.bowlerLastName}
+                  </td>
+                  {/* Display the bowler's team name */}
+                  <td>{b.team.teamName}</td>
+                  {/* Display the bowler's address, concatenated */}
+                  <td>
+                    {b.bowlerAddress +
+                      ', ' +
+                      b.bowlerCity +
+                      ' ' +
+                      b.bowlerState +
+                      ', ' +
+                      b.bowlerZip}
+                  </td>
+                  <td>{b.bowlerPhoneNumber}</td>
+                </tr>
+              ),
+          )}
         </tbody>
       </table>
     </>
